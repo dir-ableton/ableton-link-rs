@@ -18,6 +18,7 @@ fn main() {
     // into $OUT_DIR
     let dst = Config::new("c-wrapper")
                 // .cxxflag("-fno-rtti")
+                .cxxflag("-Wno-psabi")
                 // .no_build_target(true)
                 .build_target("linkrs")
                 .build();
