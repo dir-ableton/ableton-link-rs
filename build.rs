@@ -29,6 +29,7 @@ fn main() {
 
     // bindgen
     let bindings = builder()
+        .clang_arg("--sysroot=/usr/arm-linux-gnueabihf")
                     .header("c-wrapper/link_rs.h")
                     .whitelist_function("Link_.*")
                     .whitelist_function("SessionState_.*")
